@@ -236,6 +236,7 @@ vector<shared_ptr<StandardIndexItem>> Applications::Private::indexApplications()
     QLocale loc;
     QStringList xdgAppDirs = QStandardPaths::standardLocations(QStandardPaths::ApplicationsLocation);
     xdgAppDirs.append(QStandardPaths::standardLocations(QStandardPaths::DesktopLocation));
+    xdgAppDirs.append("/var/lib/snapd/desktop/applications");
 	
     /*
      * Create a list of desktop files to index (unique ids)
